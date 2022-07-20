@@ -38,6 +38,8 @@ osc_startup()
 # Make client channels to send packets.
 osc_udp_client("127.0.0.1", 7400, "aclientname")
 
+########################################################################################
+
 while (True):
     success, img = cap.read()
     img = detector.findHands(img)
@@ -57,11 +59,15 @@ while (True):
 
         length = math.hypot(x2 - x1, y2 - y1)
         # print(length) # max = 125 ; min = 15
-
+        
+        ########################### SEND TO MAX ##########################
+        
         # Build a message with autodetection of data types, and send it.
         msg = oscbuildparse.OSCMessage("/iter/me", None, [length])
         osc_send(msg, "aclientname")
         osc_process()
+        
+        ##################################################################
 
         vol = float(np.interp(length, [15, 125], [minVol, maxVol])) # to transform to an appropriate ranges
         volBar = float(np.interp(length, [15, 125], [400, 150]))
