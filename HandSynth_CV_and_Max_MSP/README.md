@@ -4,4 +4,4 @@ In this project I combined the MediaPipe by Google, CV2, OSC libraries and Max M
 
 ![alt text](https://github.com/eistakovskii/CV_projects/blob/main/HandSynth_CV_and_Max_MSP/QtPlSXa4_4x.jpg)
 
-The demonstration of the project is available at this instagram post: https://www.instagram.com/p/CVJMEmRDz5C/?igshid=MDJmNzVkMjY=
+The demonstration of the project is available at [this instagram post](https://www.instagram.com/p/CVJMEmRDz5C/?igshid=MDJmNzVkMjY=)
